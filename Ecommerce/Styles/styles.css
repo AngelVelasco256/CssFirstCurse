@@ -1,8 +1,66 @@
-h1{
-  color: black;
-  font-size: 50px;
+/* Snippet de box model y box sizing */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-h1 span {
+/* Globales */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+/* Header y Navegacion */
+.siteName{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.siteName span {
   color: rgb(0, 21, 255);
 }
+
+.line {
+  border-top: 1px solid rgba(79, 79, 79, 0.798);
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+.hero {
+  background-image: url(../Assets/Img/principal.jpg);
+  height: 550px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* BOX MODEL */
+/* Padding = separar el contenido de los bordes hacia adentro del contenedor */
+/* Margin = separar el contenido de los bordes hacia afuera del contenedor */
+/* Border = borde del contenedor */
+/* Width = ancho del contenedor */
+/* Height = alto del contenedor */
+/* Box-sizing = permite que el width y height sean el ancho y alto del contenedor, sin contar el padding y border */
+/* Snippet
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+*/
+
+/* DISPLAY */
+/* Block = ocupa todo el ancho disponible y se coloca un elemento debajo del otro */
+/* Inline = ocupa el ancho del contenido y se coloca un elemento a la derecha del otro */
+/* Inline-block = permite darle un width, height y margin a un elemento inline comun */
