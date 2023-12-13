@@ -12,6 +12,16 @@ a {
   color: black;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
 
 /* Header y Navegacion */
 .siteName{
@@ -21,17 +31,19 @@ a {
 }
 
 .siteName span {
-  color: rgb(0, 21, 255);
+  color: #2D9596;
 }
 
 .line {
   border-top: 1px solid rgba(79, 79, 79, 0.798);
-  padding: 20px 0;
+
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0px auto;
+.primaryNav{
+  padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .hero {
@@ -49,18 +61,56 @@ a {
 /* Height = alto del contenedor */
 /* Box-sizing = permite que el width y height sean el ancho y alto del contenedor, sin contar el padding y border */
 /* Snippet
-
 html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
-
 */
 
 /* DISPLAY */
 /* Block = ocupa todo el ancho disponible y se coloca un elemento debajo del otro */
 /* Inline = ocupa el ancho del contenido y se coloca un elemento a la derecha del otro */
 /* Inline-block = permite darle un width, height y margin a un elemento inline comun */
+
+/* FLEX BOX */
+/* ROW DIRECTION */
+/* flex-direction: row; ----> justify-content: left, rigth or center (izquierda, derecha o en el centro); */
+/* flex-direction: row; ----> align-items: start, center or end (arriba, en medio y abajo); */
+
+/* COLUMN DIRECTION */
+/* flex-direction: column; ----> justify-content: start, center or end (arriba, en medio y abajo); */
+/* flex-direction: column; ----> justify-content: left, rigth or center (izquierda, derecha o en el centro); */
+
+/* GRID */
+/*
+
+create rows ------> grid-templates-rows: ;
+create columns ---> grid-template-columns: ;
+
+*/
+
+/* List categories */
+.categories h2 {
+  text-align: center;
+}
+
+.category a {
+  display: block;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.category a:hover {
+  background-color: #2D9596;
+  color: #ffffff;
+  border-radius: 0 0 20px 20px;
+}
+
+.listCategories{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
