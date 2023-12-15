@@ -1,20 +1,44 @@
 /* Snippet de box model y box sizing */
 html {
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
+body {
+  font-family: 'Arimo', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2;
+}
 
 /* Globales */
+h1, h2, h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  margin: 0 0 5rem 0;
+}
+
+h1 {
+  font-size: 5rem;
+  margin-top: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
 a {
   text-decoration: none;
   color: black;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0px auto;
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
 img {
@@ -25,8 +49,8 @@ img {
 
 /* Header y Navegacion */
 .siteName{
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   text-align: center;
 }
 
@@ -35,12 +59,12 @@ img {
 }
 
 .line {
-  border-top: 1px solid rgba(79, 79, 79, 0.798);
+  border-top: 0.1rem solid rgba(79, 79, 79, 0.798);
 
 }
 
 .primaryNav{
-  padding: 20px 0;
+  padding: 2rem 0;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -48,8 +72,9 @@ img {
 
 .hero {
   background-image: url(../Assets/Img/principal.jpg);
-  height: 550px;
+  height: 55rem;
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
 }
 
@@ -81,7 +106,7 @@ html {
 
 /* COLUMN DIRECTION */
 /* flex-direction: column; ----> justify-content: start, center or end (arriba, en medio y abajo); */
-/* flex-direction: column; ----> justify-content: left, rigth or center (izquierda, derecha o en el centro); */
+/* flex-direction: column; ----> align-items: left, rigth or center (izquierda, derecha o en el centro); */
 
 /* GRID */
 /*
@@ -92,6 +117,10 @@ create columns ---> grid-template-columns: ;
 */
 
 /* List categories */
+.categories{
+  margin-top: 5rem;
+}
+
 .categories h2 {
   text-align: center;
 }
@@ -99,18 +128,53 @@ create columns ---> grid-template-columns: ;
 .category a {
   display: block;
   text-align: center;
-  padding: 20px;
-  font-size: 20px;
+  padding: 2rem;
+  font-size: 2rem;
 }
 
 .category a:hover {
   background-color: #2D9596;
   color: #ffffff;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 2rem 2rem;
 }
 
 .listCategories{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  gap: 2.5rem;
+}
+
+/* CSS Units */
+/* Rems
+
+  html {
+    font-size: 62.5%; para que...
+      1rem = 10px
+  }
+
+  body {
+    font-size: 1.6rem; para que...
+    el tamaño de la fuente permanezca po default en 16px
+  }
+*/
+
+/* AboutUs bloque */
+.aboutUs {
+  margin: 5rem 0;
+  background-image: linear-gradient( to right, transparent 50%, #2D9596 50%, #2D9596 100%), url(../Assets/Img/nosotros.jpg);
+  background-position: left center;
+  padding: 10rem 0;
+  background-repeat: no-repeat;
+  background-size: 100%, 120rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.aboutUsText {
+  grid-column: 2;
+  padding: 0 8rem;
+}
+
+.aboutUsText h2,p {
+  color: #ffffff;
 }
