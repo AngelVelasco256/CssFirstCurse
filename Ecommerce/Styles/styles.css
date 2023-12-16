@@ -12,6 +12,11 @@ body {
   line-height: 2;
 }
 
+/* Utilidades */
+.textCenter {
+  text-align: center;
+}
+
 /* Globales */
 h1, h2, h3 {
   font-family: 'Bebas Neue', sans-serif;
@@ -171,10 +176,88 @@ create columns ---> grid-template-columns: ;
 }
 
 .aboutUsText {
-  grid-column: 2;
+  grid-column: 2 / 3;
   padding: 0 8rem;
 }
 
 .aboutUsText h2,p {
   color: #ffffff;
+}
+
+/* Listado de productos principal */
+.mainProducts {
+  padding-top: 5rem;
+
+}
+
+.product {
+  background-color: #2D9596;
+}
+
+.productText {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+.productText h3 {
+  padding: 3rem 0 0 0;
+  margin: 0;
+}
+
+.productText .productDesc{
+  padding: 2.5rem;
+  margin: 0;
+}
+
+.productText .precio {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin: 0 0 2.5rem 0;
+}
+
+.productText a {
+  background-color: #2D9596;
+  display: block;
+  margin: 2rem;
+  transition: background-color .4s ease-out;
+}
+
+.productText a:hover {
+  background-color: #1b6492;
+}
+
+.listProducts {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1/3fr);
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+}
+
+.one {
+  grid-area: 1 / 1 / 2 / 7;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.one img {
+  height: 60rem;
+  width: 100%;
+  object-fit: cover;
+}
+.two{
+  grid-area: 2 / 1 / 3 / 4;
+}
+.three{
+  grid-area: 2 / 4 / 3 / 7;
+}
+.four{
+  grid-area: 3 / 1 / 4 / 3;
+}
+.five{
+  grid-area: 3 / 3 / 4 / 5;
+}
+.six{
+  grid-area: 3 / 5 / 4 / 7;
 }
