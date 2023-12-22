@@ -320,3 +320,100 @@ create columns ---> grid-template-columns: ;
   color: black;
   padding-top: 2.5rem;
 }
+
+
+/* About Us */
+.sectionMain h2 {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.sectionAboutus {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 2.5rem;
+}
+
+.sectionAboutus p {
+  margin: 0;
+  color: black;
+}
+
+/* Blogs */
+.titleBlog {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.blogContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 4rem;
+}
+
+.blogContainer aside {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.blogEntrie {
+  display: flex;
+  flex-direction: column;
+}
+
+.blogEntrie img {
+  width: 100%;
+  height: 50rem;
+  object-fit: cover;
+}
+
+.blogEntrie p {
+  color: black;
+}
+
+.blogInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-weight: 900;
+}
+
+.dateBlog {
+  text-align: left;
+  margin: 0;
+}
+.dateBlog span{
+  color: #1b6492;
+}
+.authorBlog {
+  text-align: right;
+  margin: 0;
+}
+.authorBlog span{
+  color: #1b6492;
+}
+
+.blog p {
+  margin: 0.5rem;
+}
+
+.blog h3 {
+  font-size: 2.5rem;
+}
+
+section {
+  margin: 1rem 0;
+}
+
+section h3 {
+  margin-bottom: 0.5rem;
+}
+
+.ridingBlog {
+  background-color: #1b6492;
+  display: block;
+  width: 35%;
+  text-align: center;
+  color: white;
+}
