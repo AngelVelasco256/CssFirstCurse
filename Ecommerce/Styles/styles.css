@@ -394,6 +394,10 @@ create columns ---> grid-template-columns: ;
   color: #1b6492;
 }
 
+.blog{
+  padding-bottom: 2rem;
+  border-bottom: 0.1rem solid #1b6492;
+}
 .blog p {
   margin: 0.5rem;
 }
@@ -416,4 +420,22 @@ section h3 {
   width: 35%;
   text-align: center;
   color: white;
+}
+
+aside {
+  margin-top: 1rem;
+}
+
+.navAside h3 {
+  font-size: 2.5rem;
+  padding-left: 2.5rem;
+  margin-bottom: 0;
+}
+
+.navAside ul {
+margin-top: 0;
+}
+
+.navAside ul li{
+
 }
