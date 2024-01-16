@@ -436,6 +436,40 @@ aside {
 margin-top: 0;
 }
 
-.navAside ul li{
+.containerEntrieBlog {
+  width: 74.165rem;
+  margin: 2rem auto 5rem auto;
+}
 
+.dateBlog .textBlack {
+  color: black;
+}
+.authorBlog .textBlack {
+  color: black;
+}
+
+.titleBlog {
+  text-align: center;
+  font-weight: 200;
+  font-size: 4.8rem;
+  margin: 2rem auto 0 auto;
+}
+
+.bodyText p{
+  color: black;
+}
+
+.galery {
+  margin: 5rem auto;
+}
+
+.listOfGalery {
+  list-style: none;
+}
+
+.listOfGalery li a img {
+  width: 75%;
+  height: 75%;
+  object-fit:cover;
+  margin: 5rem 0;
 }
