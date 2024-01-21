@@ -30,9 +30,66 @@
 
   <main class="container">
     <h2>Contact</h2>
-    <form action="get">
-      <label for="name">Name</label>
-      <input id="name" type="text" placeholder="Write your name here">
+    <form class="formContact">
+      <fieldset>
+        <legend>Personal Info.</legend>
+        <div class="field">
+          <label for="name">Nombre</label>
+          <input id="name" type="text" placeholder="Your name here">
+        </div>
+        <div class="field">
+          <label for="matter">Matter</label>
+          <input id="matter" type="text" >
+        </div>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input id="email" type="email" placeholder="Your name here">
+        </div>
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <input id="phone" type="tel" >
+        </div>
+        <div class="field">
+          <label for="msg">Message</label>
+          <textarea id="msg" cols="30" rows="1"></textarea>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Country</legend>
+        <div class="field">
+          <label for="country">Country</label>
+          <select name="countries" id="country">
+            <option disabled selected>--Select your country--</option>
+            <option value="MX">México</option>
+            <option value="US">United States</option>
+            <option value="CA">Canada</option>
+            <option value="ES">España</option>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Extra Info</legend>
+        <div class="field">
+          <label for="client">Client</label>
+          <input id="client"  type="radio" name="typeUser">
+        </div>
+        <div class="field">
+          <label for="contractor">Contractor</label>
+          <input id="contractor" type="radio" name="typeUser">
+        </div>
+        <div class="field">
+          <label for="category">Choose category</label>
+          <input list="categories" placeholder="Choose your category">
+          <datalist id="categories">
+            <option value="Kitchen">
+            <option value="Office">
+            <option value="Garden">
+            <option value="Garage">
+            <option value="Bedroom">
+          </datalist>
+        </div>
+      </fieldset>
+      <input class="btn" type="submit" value="Submit">
     </form>
   </main>
 
@@ -72,4 +129,5 @@
     <p class="copyright container">All rigths reserved. FurnitureShop 2023</p>
   </footer>
 </body>
+
 </html>

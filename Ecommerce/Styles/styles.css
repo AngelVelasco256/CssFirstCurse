@@ -486,3 +486,56 @@ margin-top: 0;
   height: 100%;
   object-fit: cover;
 }
+
+/* Form Contact */
+.formContact {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+form fieldset {
+  border: 1px solid #1b6492;
+  margin-bottom: 2rem;
+}
+
+form legend {
+  background-color: #1b6492;
+  color: white;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+
+.field {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.field label {
+  flex-basis: 15rem;
+}
+
+.field input:not([type="radio"]),
+.field textarea,
+.field select {
+  flex: 1;
+  padding: 1rem;
+  border: 1px solid #1b6492;
+}
+
+.btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: #2D9596;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  font-weight: 900;
+  transition: background-color .4s ease-out;
+}
+
+.btn:hover {
+  background-color: #1b6492;
+}
