@@ -99,6 +99,147 @@ h1, h2 {
 .d-flex-3 {
     display: flex;
     justify-content: flex-start; /*DEFAULT*/
+
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-around;
     justify-content: space-between;
+    justify-content: space-evenly;
 }
 
+/* 4 JUSTIFY-CONTENT CUANDO (FLEX-DIRECTION: COLUMN)
+    CUANDO SE CAMBIA LA DIRECCION DEL EJE PRINCIPAL POR COLUMNAS, LA PROPIEDAD ACTUA COMO SI LA ORIENTACION GIRACE 90° HACIA ABAJO DE MANERA QUE EN---
+*/
+.d-flex-4 {
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: space-evenly;
+}
+
+/* 5 ALIGN-ITEMS CUANDO (FLEX-DIRECTION:ROW) 
+    ALIGN-ITEMS SE UTILIZA PARA ALINEAR LOS ELEMTENTOS HIJOS YA SEA ARRIBA, ABAJO O AL CENTRO DEL CONTENEDOR, CUANDO LA DIRECCION DEL EJE ES ROW
+    ALIGN-ITEMS: FLEX-START: COLOCARA LOS ELEMENTOS EN LA PARTE DE ARRIBA DEL CONTENEDOR PORQUE AHI SE SITUARA EL EJE PRINCIPAL
+    ALIGN-ITEMS: FLEX-END: MUEVE EL EJE A LA PARTE DE ABAJO DEL CONTENEDOR Y SOBRE ESTE COLOCARA LOS ELEMENTOS HIJOS
+    ALIGN-ITEMS: CENTER: POSICIONA EL EJE PRINCIPAL DE NUESTRO ELEMENTOS FLEX EN EL CENTRO DEL CONTENEDOR Y SOBRE EL ACOMODARA LOS HIJOS
+*/
+.d-flex-5 {
+    display: flex;
+    height: 700px;
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+}
+
+/* 6 ALIGN-ITEMS CUANDO (FLEX-DIRECTION: COLUMN) 
+    COMO LA DIRECCION DEL EJE PRINCIPAL CAMBIO A COLUMNA, LA PROPIEDAD AHORA COLOCARA ESE EJE QUE CORRE DE ARRIBA A ABAJO DEL CONTENEDOR, EN LA PARTE IZQUIERDA, DERECHA O EN EL CENTRO PERO MANTENIENDO A LOS HIJOS UNO ENCIMA DE OTRO
+*/
+.d-flex-6 {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+}
+
+/* 7 ALIGN-ITEMS & JUSTIFY-CONTENT COMBINADOS 
+    https://flexboxfroggy.com/ ---> JUEGO PARA PRACTICAR CSS FLEXBOX
+*/
+.d-flex-7 {
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 8 FLEX BASIS
+    LA PROPIEDAD FLEX BASIS, DIFERENTE A LAS DEMAS PROPIEDADES DE FLEX BOX NO SE DEFINE EN EL ELEMENTO PADRE SI NO EN EL CSS DE LOS ELEMENTOS HIJOS Y LO QUE HARA SERA DEFINIR EL ANCHO "INICIAL" DE ESE ELEMENTO (POR ASI DECIRLO, EL MINIMO) PERO SI ASI LO AMERITA, EL CONTENIDO DEL ELEMENTO PUEDE HACER QUE ESTE INCREMENTE SE TAMAÑO
+*/
+.d-flex-8 {
+    display: flex;
+}
+.d-flex-8 .box {
+    flex-basis: 200px;
+}
+
+/* 9 GAP Y CALC
+LA PROPIEDAD GAP SE AGREGO NO HACE MUCHO Y PERMITE A LOS ELEMENTOS HIJOS EL TENER UNA SEPARACION ENTRE ELLOS 
+
+POR OTRO LADO LA PROPIEDAD CALC NOS SIRVE PARA INDICAR POR MEDIO DE LENGUAJE CSS UNA OPERACION MATEMATICA QUE QUERAMOS HACER
+*/
+.d-flex-9 {
+    display: flex;
+    gap: 2rem;
+}
+.d-flex-9 .box {
+    flex-basis: 33.33333%;
+}
+
+.d-flex-9 {
+    display: flex;
+    justify-content: space-between;
+}
+.d-flex-9 .box:nth-child(1) {
+    flex-basis: calc(50% - 1rem);
+}
+
+.d-flex-9 .box:nth-child(2),
+.d-flex-9 .box:nth-child(3) {
+    flex-basis: calc(25% - 1rem);
+}
+
+/* 10 FLEX WRAP
+LA PROPIEDAD FLEX WRAP ESPECIFICA SI LOS ELEMENTOS HIJOS SON OBLIGADOS A PERMANECER EN UNA MISMA LINEA O PUEDEN FLUIR EN VARIAS
+*/
+.d-flex-10 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.d-flex-10 .box {
+    flex-basis: 33.3%;
+}
+
+/* 11 FLEX GROW
+La propiedad `flex-grow` en CSS define cuánto crecerá un elemento en relación con el resto de los elementos flexibles dentro del mismo contenedor. 
+
+Por ejemplo, si todos los elementos tienen `flex-grow` establecido en 1, todos crecerán a la misma velocidad para ocupar cualquier espacio adicional dentro del contenedor. Si un elemento tiene `flex-grow` establecido en 2, crecerá al doble de velocidad que los otros elementos.
+
+El valor por defecto de `flex-grow` es 0, lo que significa que el elemento no crecerá para llenar el espacio adicional. Un valor de `flex-grow` mayor que 0 permitirá que el elemento crezca para llenar el espacio adicional si está disponible.
+*/
+
+.d-flex-11 {
+    display: flex;
+}
+.d-flex-11 .box{
+    flex-grow: 1;
+}
+.d-flex-11 .box:nth-child(2) {
+    flex-grow: 2;
+}
+
+/* 12 FLEX SHRINK
+La propiedad `flex-shrink` en CSS define cómo un elemento flexible se reducirá si es necesario en relación con el resto de los elementos flexibles en el mismo contenedor.
+
+El valor de `flex-shrink` es un número sin unidades. Este número representa la "proporción de encogimiento" del elemento flexible en comparación con los demás. Por ejemplo, si todos los elementos tienen `flex-shrink` establecido en 1, todos se reducirán a la misma velocidad cuando el contenedor sea demasiado pequeño para todos ellos.
+
+El valor por defecto de `flex-shrink` es 1, lo que significa que el elemento se reducirá para evitar que el contenedor se desborde. Un valor de `flex-shrink` de 0 evitará que el elemento se reduzca.
+*/
+.d-flex-12 {
+    display: flex;
+}
+.d-flex-12 .box {
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+.d-flex-12 .box:nth-child(3){
+    flex-basis: 1;
+    flex-shrink: 3;
+}
